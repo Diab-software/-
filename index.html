@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝓐𝓼𝓶𝓪𝓪 ✧ 𝓜𝓸𝓱𝓪𝓶𝓶𝓪𝓭 ✧ - موقع حب خارق</title>
+    <title>𝓐𝓼𝓶𝓪𝓪 ✧ 𝓜𝓸𝓱𝓪𝓶𝓶𝓪𝓭 ✧</title>
     <!-- الخطوط والأيقونات -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +14,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: 'Cairo', sans-serif;
             min-height: 100vh;
@@ -27,63 +26,7 @@
             align-items: center;
             position: relative;
         }
-        
-        /* تأثير الخلفية المتحركة ثلاثية الأبعاد */
-        .bg-effect {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -5;
-            overflow: hidden;
-        }
-        
-        .bg-effect span {
-            position: absolute;
-            display: block;
-            width: 20px;
-            height: 20px;
-            background: rgba(255, 105, 180, 0.1);
-            border-radius: 50%;
-            animation: moveBackground 20s linear infinite;
-            pointer-events: none;
-        }
-        
-        @keyframes moveBackground {
-            0% { transform: translateY(-100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.5; }
-            90% { opacity: 0.5; }
-            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-        }
-        
-        /* تأثير الجسيمات المتلألئة */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -4;
-            pointer-events: none;
-        }
-        
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
-            animation: twinkleParticle 3s infinite alternate;
-        }
-        
-        @keyframes twinkleParticle {
-            0% { opacity: 0.1; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.5); }
-        }
-        
-        /* شاشة البداية الخارقة */
+        /* شاشة البداية الساحرة */
         .splash-screen {
             position: fixed;
             top: 0;
@@ -97,718 +40,407 @@
             z-index: 2000;
             transition: opacity 1.5s ease;
         }
-        
         .splash-content {
             text-align: center;
-            padding: 60px;
+            padding: 40px;
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 70px;
-            box-shadow: 0 0 100px #ff69b4, 0 0 200px #ff1493;
-            border: 2px solid rgba(255, 182, 193, 0.5);
-            animation: superGlow 2s infinite alternate;
-            transform-style: preserve-3d;
-            transform: perspective(1000px) rotateX(5deg);
+            backdrop-filter: blur(15px);
+            border-radius: 50px;
+            box-shadow: 0 0 80px #ff69b4;
+            border: 1px solid rgba(255, 182, 193, 0.5);
+            animation: glow 3s infinite alternate;
         }
-        
-        @keyframes superGlow {
-            0% { box-shadow: 0 0 100px #ff69b4, 0 0 200px #ff1493; transform: perspective(1000px) rotateX(5deg) scale(1); }
-            100% { box-shadow: 0 0 150px #ff1493, 0 0 250px #ff69b4; transform: perspective(1000px) rotateX(5deg) scale(1.02); }
+        @keyframes glow {
+            from { box-shadow: 0 0 50px #ff69b4; }
+            to { box-shadow: 0 0 100px #ff1493; }
         }
-        
         .splash-title {
             font-family: 'Dancing Script', cursive;
-            font-size: 6rem;
-            background: linear-gradient(45deg, #ffccd5, #d0b0ff, #ffb0d9, #ff69b4);
+            font-size: 5rem;
+            background: linear-gradient(45deg, #ffccd5, #d0b0ff, #ffb0d9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 50px #ff69b4, 0 0 100px #ff1493;
+            text-shadow: 0 0 30px #ff69b4;
             margin-bottom: 30px;
-            animation: textGlitch 3s infinite;
         }
-        
-        @keyframes textGlitch {
-            0%, 100% { transform: skew(0deg); }
-            95% { transform: skew(2deg); }
-            96% { transform: skew(-2deg); }
-            97% { transform: skew(1deg); }
-        }
-        
         .enter-button {
-            background: linear-gradient(45deg, #ff69b4, #d056c5, #b0309e, #8a2be2);
+            background: linear-gradient(45deg, #ff69b4, #d056c5, #b0309e);
             border: none;
-            padding: 25px 60px;
-            border-radius: 80px;
+            padding: 20px 50px;
+            border-radius: 60px;
             color: white;
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: bold;
             cursor: pointer;
-            box-shadow: 0 0 50px #ff69b4, 0 0 100px #ff1493;
-            animation: superPulse 1.5s infinite;
+            box-shadow: 0 0 40px #ff69b4;
+            animation: pulse 2s infinite;
             transition: 0.5s;
-            position: relative;
-            overflow: hidden;
         }
-        
-        .enter-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            animation: shine 3s infinite;
-        }
-        
-        @keyframes shine {
-            0% { left: -100%; }
-            20% { left: 100%; }
-            100% { left: 100%; }
-        }
-        
-        @keyframes superPulse {
-            0% { transform: scale(1); box-shadow: 0 0 50px #ff69b4, 0 0 100px #ff1493; }
-            50% { transform: scale(1.1); box-shadow: 0 0 80px #ff1493, 0 0 150px #ff69b4; }
-        }
-        
         .enter-button:hover {
-            transform: scale(1.15);
-            box-shadow: 0 0 100px #ff1493, 0 0 200px #ff69b4;
+            transform: scale(1.1);
+            box-shadow: 0 0 70px #ff1493;
         }
-        
-        /* رأس الموقع ثلاثي الأبعاد */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* رأس الموقع */
         .header {
             text-align: center;
-            padding: 30px;
+            padding: 25px;
             width: 100%;
-            max-width: 1000px;
+            max-width: 900px;
             background: rgba(10, 5, 20, 0.5);
-            backdrop-filter: blur(15px);
-            border-radius: 70px;
-            box-shadow: 0 0 70px #ff69b4, 0 0 140px #ff1493;
-            margin-bottom: 30px;
-            border: 2px solid rgba(255, 182, 193, 0.5);
-            position: relative;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            animation: headerFloat 6s infinite ease-in-out;
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            box-shadow: 0 0 50px #ff69b4;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 182, 193, 0.4);
         }
-        
-        @keyframes headerFloat {
-            0%, 100% { transform: translateY(0) rotateX(0); }
-            50% { transform: translateY(-10px) rotateX(2deg); }
-        }
-        
-        .header::before {
-            content: "❤️🌹💌";
-            position: absolute;
-            bottom: -30px;
-            right: -30px;
-            font-size: 12rem;
-            opacity: 0.1;
-            transform: rotate(15deg);
-            animation: spinSlow 30s linear infinite;
-        }
-        
-        @keyframes spinSlow {
-            from { transform: rotate(15deg); }
-            to { transform: rotate(375deg); }
-        }
-        
         h1 {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 25px;
+            gap: 20px;
             flex-wrap: wrap;
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
-        
         .fancy-names {
-            font-size: 4rem;
-            background: linear-gradient(45deg, #ffccd5, #d0b0ff, #ffb0d9, #ff69b4);
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #ffccd5, #d0b0ff, #ffb0d9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px #ff69b4, 0 0 60px #ff1493;
-            animation: nameGlow 3s infinite alternate;
+            text-shadow: 0 0 20px #ff69b4;
         }
-        
-        @keyframes nameGlow {
-            from { text-shadow: 0 0 30px #ff69b4, 0 0 60px #ff1493; }
-            to { text-shadow: 0 0 50px #ff1493, 0 0 100px #ff69b4; }
-        }
-        
-        /* القلب النابض فائق */
+        /* القلب النابض */
         .heart-container {
             position: relative;
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             cursor: pointer;
-            animation: superHeartbeat 1s infinite;
+            animation: heartbeat 1.2s infinite;
         }
-        
         .heart {
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             background: #ff69b4;
             transform: rotate(45deg);
-            box-shadow: 0 0 70px #ff69b4, 0 0 140px #ff1493;
+            box-shadow: 0 0 50px #ff69b4;
         }
-        
         .heart::before, .heart::after {
             content: "";
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             background: #ff69b4;
             border-radius: 50%;
-            box-shadow: 0 0 70px #ff69b4;
         }
-        
-        .heart::before { top: -50px; left: 0; }
-        .heart::after { top: 0; left: -50px; }
-        
-        @keyframes superHeartbeat {
+        .heart::before { top: -40px; left: 0; }
+        .heart::after { top: 0; left: -40px; }
+        @keyframes heartbeat {
             0% { transform: rotate(45deg) scale(1); }
-            25% { transform: rotate(45deg) scale(1.2); }
-            50% { transform: rotate(45deg) scale(1); }
-            75% { transform: rotate(45deg) scale(1.1); }
+            50% { transform: rotate(45deg) scale(1.1); }
         }
-        
+
         /* التاريخ الخاص */
         .special-date {
-            background: linear-gradient(45deg, #ff69b4, #d056c5, #b0309e);
-            padding: 15px 35px;
-            border-radius: 50px;
+            background: linear-gradient(45deg, #ff69b4, #d056c5);
+            padding: 10px 25px;
+            border-radius: 40px;
             display: inline-block;
-            margin-top: 20px;
-            font-size: 1.8rem;
-            box-shadow: 0 0 30px #ff69b4, 0 0 60px #ff1493;
-            animation: dateGlow 2s infinite alternate;
-            border: 1px solid rgba(255,255,255,0.3);
+            margin-top: 15px;
+            font-size: 1.5rem;
+            box-shadow: 0 0 20px #ff69b4;
+            animation: glowDate 2s infinite alternate;
         }
-        
-        @keyframes dateGlow {
-            from { box-shadow: 0 0 30px #ff69b4, 0 0 60px #ff1493; }
-            to { box-shadow: 0 0 50px #ff1493, 0 0 100px #ff69b4; }
+        @keyframes glowDate {
+            from { box-shadow: 0 0 20px #ff69b4; }
+            to { box-shadow:  ‌0 0 40px #ff1493; }
         }
-        
-        /* أقسام الذكرى والاقتباس مع تأثيرات خارقة */
+
+        /* أقسام الذكرى والاقتباس */
         .memory-section, .quote-section {
             width: 100%;
-            max-width: 1000px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(15px);
-            border-radius: 60px;
-            padding: 40px;
-            margin: 25px 0;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 40px;
+            padding: 30px;
+            margin: 20px 0;
             text-align: center;
-            box-shadow: 0 0 70px #ff69b4, 0 0 140px #ff1493;
-            border: 2px solid rgba(255, 182, 193, 0.5);
-            position: relative;
-            overflow: hidden;
-            transition: 0.5s;
+            box-shadow: 0 0 50px #ff69b4;
+            border: 1px solid rgba(255, 182, 193, 0.4);
         }
-        
-        .memory-section:hover, .quote-section:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 100px #ff1493, 0 0 200px #ff69b4;
-        }
-        
-        .memory-section i, .quote-section i {
-            font-size: 5rem;
-            color: #ff69b4;
-            margin-bottom: 15px;
-            animation: superFloat 3s infinite;
-            filter: drop-shadow(0 0 20px #ff69b4);
-        }
-        
-        @keyframes superFloat {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-15px) rotate(5deg); }
-            75% { transform: translateY(-5px) rotate(-5deg); }
-        }
-        
         .quote-content {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-style: italic;
             color: #d0b0ff;
             font-family: 'Dancing Script', cursive;
-            line-height: 1.8;
-            text-shadow: 0 0 20px #ff69b4;
-            animation: quotePulse 4s infinite;
+            line-height: 1.6;
         }
-        
-        @keyframes quotePulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.9; text-shadow: 0 0 30px #ff69b4; }
-        }
-        
-        /* رسائل الحب بتأثير بطاقات سحرية */
+
+        /* رسائل الحب */
         .messages-container {
             width: 100%;
-            max-width: 1000px;
+            max-width: 900px;
         }
-        
         .message-card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 50px;
-            padding: 30px;
-            margin: 25px 0;
-            border: 2px solid rgba(255, 182, 193, 0.5);
-            box-shadow: 0 0 40px rgba(255, 105, 180, 0.5);
-            transition: 0.5s;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 182, 193, 0.5);
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+            transition: 0.4s;
             position: relative;
             overflow: hidden;
-            animation: cardAppear 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            transform-origin: center;
         }
-        
-        @keyframes cardAppear {
-            from { transform: scale(0.5) rotateY(90deg); opacity: 0; }
-            to { transform: scale(1) rotateY(0); opacity: 1; }
-        }
-        
         .message-card::before {
-            content: "💕💖💗";
+            content: "❤️";
             position: absolute;
-            bottom: -30px;
-            right: -30px;
+            bottom: -20px;
+            right: -20px;
             font-size: 8rem;
             opacity: 0.1;
             transform: rotate(15deg);
-            animation: spinSlow 40s linear infinite;
         }
-        
-        .message-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(255,105,180,0.2), transparent 70%);
-            pointer-events: none;
-        }
-        
         .message-card:hover {
-            transform: scale(1.03) translateY(-10px);
-            box-shadow: 0 0 70px #ff69b4, 0 0 140px #ff1493;
-            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.02) translateY(-5px);
+            box-shadow: 0 0 50px #ff69b4;
+            background: rgba(255, 255, 255, 0.15);
         }
-        
         .message-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
-        
         .message-date {
             color: #ffb0d9;
-            font-size: 1.2rem;
-            text-shadow: 0 0 10px #ff69b4;
+            font-size: 1.1rem;
         }
-        
         .message-actions button {
             background: none;
             border: none;
             color: #ffb0d9;
-            font-size: 1.5rem;
-            margin: 0 8px;
+            font-size: 1.3rem;
+            margin: 0 5px;
             cursor: pointer;
             transition: 0.3s;
-            filter: drop-shadow(0 0 10px #ff69b4);
         }
-        
-        .message-actions button:hover { 
-            color: #ff69b4; 
-            transform: scale(1.3) rotate(10deg);
-            filter: drop-shadow(0 0 20px #ff1493);
-        }
-        
+        .message-actions button:hover { color: #ff69b4; transform: scale(1.2); }
         .message-content {
-            font-size: 1.8rem;
-            line-height: 1.8;
+            font-size: 1.6rem;
+            line-height: 1.6;
             white-space: pre-wrap;
             font-style: italic;
-            text-shadow: 0 0 10px rgba(255,255,255,0.3);
         }
-        
-        /* إضافة رسالة بتأثير سحري */
+
+        /* إضافة رسالة */
         .add-message-container {
             width: 100%;
-            max-width: 1000px;
-            background: rgba(10, 5, 20, 0.7);
-            backdrop-filter: blur(15px);
-            border-radius: 70px;
-            padding: 50px;
-            margin: 40px 0;
-            box-shadow: 0 0 80px #ff69b4, 0 0 160px #ff1493;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid rgba(255, 182, 193, 0.5);
+            max-width: 900px;
+            background: rgba(10, 5, 20, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 0 60px #ff69b4;
         }
-        
-        .add-message-container i.fa-envelope {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 8rem;
-            opacity: 0.1;
-            color: #ff69b4;
-            transform: rotate(-15deg);
-            animation: spinSlow 30s linear infinite;
-        }
-        
         textarea {
             width: 100%;
-            height: 180px;
-            background: rgba(255, 255, 255, 0.15);
-            border: 3px solid #ff69b4;
-            border-radius: 50px;
-            padding: 25px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #ff69b4;
+            border-radius: 30px;
+            padding: 20px;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-family: 'Cairo', sans-serif;
-            margin-bottom: 25px;
-            transition: 0.5s;
-            box-shadow: 0 0 30px #ff69b4;
+            margin-bottom: 20px;
+            transition: 0.3s;
         }
-        
         textarea:focus {
             outline: none;
             border-color: #ff1493;
-            box-shadow: 0 0 60px #ff69b4, 0 0 120px #ff1493;
-            transform: scale(1.02);
+            box-shadow: 0 0 40px #ff69b4;
         }
-        
         button {
-            background: linear-gradient(45deg, #ff69b4, #d056c5, #b0309e, #8a2be2);
+            background: linear-gradient(45deg, #ff69b4, #d056c5);
             border: none;
-            padding: 20px 50px;
-            border-radius: 80px;
+            padding: 15px 40px;
+            border-radius: 60px;
             color: white;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             cursor: pointer;
-            box-shadow: 0 0 40px #ff69b4, 0 0 80px #ff1493;
-            transition: 0.5s;
+            box-shadow: 0 0 30px #ff69b4;
+            transition: 0.3s;
             display: inline-flex;
             align-items: center;
-            gap: 15px;
-            position: relative;
-            overflow: hidden;
+            gap: 10px;
         }
-        
-        button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            animation: shine 4s infinite;
-        }
-        
         button:hover {
-            transform: scale(1.1) translateY(-5px);
-            box-shadow: 0 0 70px #ff1493, 0 0 140px #ff69b4;
+            transform: scale(1.05);
+            box-shadow: 0 0 50px #ff1493;
         }
-        
-        /* صندوق الهدية السحري */
+
+        /* صندوق الهدية */
         .gift-box {
             position: fixed;
-            bottom: 40px;
-            left: 40px;
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, #ff69b4, #b0309e, #8a2be2);
-            border-radius: 30px;
+            bottom: 30px;
+            left: 30px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff69b4, #b0309e);
+            border-radius: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            box-shadow: 0 0 60px #ff69b4, 0 0 120px #ff1493;
-            animation: superFloat 3s infinite, rotateBox 10s infinite;
+            box-shadow: 0 0 40px #ff69b4;
+            animation: float 3s infinite;
             z-index: 100;
-            border: 2px solid rgba(255,255,255,0.3);
         }
-        
-        @keyframes rotateBox {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(5deg); }
-            75% { transform: rotate(-5deg); }
+        .gift-box i { font-size: 3rem; color: white; }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
-        
-        .gift-box i { 
-            font-size: 4rem; 
-            color: white;
-            filter: drop-shadow(0 0 20px white);
-            animation: giftShine 2s infinite;
-        }
-        
-        @keyframes giftShine {
-            0%, 100% { filter: drop-shadow(0 0 20px white); }
-            50% { filter: drop-shadow(0 0 40px #ff69b4); }
-        }
-        
-        .gift-box:hover {
-            transform: scale(1.2) rotate(10deg);
-            box-shadow: 0 0 100px #ff1493, 0 0 200px #ff69b4;
-        }
-        
-        /* النوافذ المنبثقة الخارقة */
+
+        /* النوافذ المنبثقة */
         .gift-modal, .letter-modal {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.8);
             display: none;
             justify-content: center;
             align-items: center;
             z-index: 3000;
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(8px);
         }
-        
-        .gift-modal.active, .letter-modal.active { 
-            display: flex;
-            animation: modalAppear 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-        
-        @keyframes modalAppear {
-            from { opacity: 0; transform: scale(0.3) rotateY(180deg); }
-            to { opacity: 1; transform: scale(1) rotateY(0); }
-        }
-        
+        .gift-modal.active, .letter-modal.active { display: flex; }
         .gift-content, .letter-content {
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-            padding: 60px;
-            border-radius: 80px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 50px;
+            border-radius: 60px;
             text-align: center;
-            max-width: 700px;
+            max-width: 600px;
             width: 90%;
-            border: 3px solid #ff69b4;
-            box-shadow: 0 0 150px #ff69b4, 0 0 300px #ff1493;
-            animation: contentPulse 2s infinite;
-            position: relative;
-            overflow: hidden;
+            border: 2px solid #ff69b4;
+            box-shadow: 0 0 100px #ff69b4;
+            animation: popIn 0.5s;
         }
-        
-        @keyframes contentPulse {
-            0%, 100% { box-shadow: 0 0 150px #ff69b4, 0 0 300px #ff1493; }
-            50% { box-shadow: 0 0 200px #ff1493, 0 0 400px #ff69b4; }
+        @keyframes popIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
-        
-        .gift-content i, .letter-content i {
-            font-size: 7rem;
-            color: #ff69b4;
-            margin: 20px;
-            filter: drop-shadow(0 0 30px #ff69b4);
-            animation: iconSpin 10s infinite;
-        }
-        
-        @keyframes iconSpin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
         .letter-content {
             background: #fff9f0;
             color: #5a3e36;
             font-family: 'Dancing Script', cursive;
-            font-size: 2.2rem;
-            background: linear-gradient(135deg, #fff9f0, #ffe4e1);
+            font-size: 2rem;
         }
-        
         .close-btn {
-            position: absolute;
-            top: 25px;
-            left: 25px;
+            float: left;
             background: none;
             border: none;
             color: white;
-            font-size: 2.5rem;
+            font-size: 2rem;
             cursor: pointer;
-            transition: 0.3s;
-            filter: drop-shadow(0 0 10px white);
         }
-        
-        .close-btn:hover {
-            transform: rotate(90deg) scale(1.2);
-            color: #ff69b4;
-        }
-        
         .letter-content .close-btn { color: #5a3e36; }
-        
-        /* العناصر المتحركة الخارقة */
+
+        /* العناصر المتحركة في الخلفية */
         .floating-heart {
             position: fixed;
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #ff69b4;
             pointer-events: none;
             z-index: 50;
-            animation: superFloatUp 8s linear forwards;
-            filter: drop-shadow(0 0 20px #ff69b4);
+            animation: floatUp 8s linear forwards;
         }
-        
-        @keyframes superFloatUp {
-            0% { transform: translateY(100vh) scale(1) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-100px) scale(0.2) rotate(720deg); opacity: 0; }
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(1); opacity: 0.8; }
+            100% { transform: translateY(-100px) scale(0.2); opacity: 0; }
         }
-        
-        .floating-rose {
-            position: fixed;
-            font-size: 3rem;
-            color: #ff1493;
-            pointer-events: none;
-            z-index: 45;
-            animation: superFloatUp 10s linear forwards;
-            filter: drop-shadow(0 0 20px #ff1493);
-        }
-        
-        .floating-star {
-            position: fixed;
-            font-size: 2rem;
-            color: gold;
-            pointer-events: none;
-            z-index: 40;
-            animation: superFloatUp 12s linear forwards;
-            filter: drop-shadow(0 0 20px gold);
-        }
-        
         .bubble {
             position: absolute;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: #ff69b4;
-            text-shadow: 0 0 20px white, 0 0 40px #ff69b4;
+            text-shadow: 0 0 10px white;
             pointer-events: none;
-            animation: superBubbleRise 4s forwards;
+            animation: bubbleRise 3s forwards;
             z-index: 2000;
             font-family: 'Dancing Script', cursive;
-            font-weight: bold;
         }
-        
-        @keyframes superBubbleRise {
-            0% { transform: translateY(0) scale(0.5) rotate(0deg); opacity: 1; }
-            50% { transform: translateY(-75px) scale(1.3) rotate(10deg); opacity: 0.9; }
-            100% { transform: translateY(-200px) scale(0.8) rotate(-10deg); opacity: 0; }
+        @keyframes bubbleRise {
+            0% { transform: translateY(0) scale(0.8); opacity: 1; }
+            100% { transform: translateY(-150px) scale(1.2); opacity: 0; }
         }
-        
         .confetti {
             position: fixed;
-            width: 15px;
-            height: 15px;
+            width: 12px;
+            height: 12px;
             background: #ff69b4;
             border-radius: 50%;
-            animation: superConfettiFall 5s linear forwards;
+            animation: confettiFall 4s linear forwards;
             z-index: 1500;
         }
-        
-        @keyframes superConfettiFall {
-            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(1080deg); opacity: 0; }
+        @keyframes confettiFall {
+            to { transform: translateY(100vh) rotate(720deg); opacity: 0; }
         }
-        
-        .rainbow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-            background-size: 1800% 1800%;
-            animation: rainbow 18s ease infinite;
-            z-index: 5000;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.5s;
-        }
-        
-        .rainbow.active {
-            opacity: 0.3;
-        }
-        
-        @keyframes rainbow { 
-            0%{background-position:0% 82%}
-            50%{background-position:100% 19%}
-            100%{background-position:0% 82%}
-        }
-        
-        /* عداد ومشغل سحري */
+
+        /* عداد ومشغل وهمي */
         .love-count, .music-player {
             position: fixed;
             top: 20px;
-            background: rgba(255,255,255,0.15);
-            padding: 15px 25px;
-            border-radius: 40px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,182,193,0.5);
-            box-shadow: 0 0 30px #ff69b4, 0 0 60px #ff1493;
+            background: rgba(255,255,255,0.1);
+            padding: 12px 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,182,193,0.5);
+            box-shadow: 0 0 20px #ff69b4;
             z-index: 100;
-            font-size: 1.2rem;
-            animation: countPulse 2s infinite;
         }
-        
-        @keyframes countPulse {
-            0%, 100% { box-shadow: 0 0 30px #ff69b4, 0 0 60px #ff1493; }
-            50% { box-shadow: 0 0 50px #ff1493, 0 0 100px #ff69b4; }
-        }
-        
         .love-count { left: 20px; }
         .music-player { right: 20px; cursor: pointer; }
-        
+
         /* تذييل */
         footer {
-            margin-top: 50px;
+            margin-top: 40px;
             color: #aaa;
-            font-size: 1.2rem;
-            text-shadow: 0 0 10px #ff69b4;
-            animation: footerGlow 3s infinite;
+            font-size: 1.1rem;
         }
-        
-        @keyframes footerGlow {
-            0%, 100% { text-shadow: 0 0 10px #ff69b4; }
-            50% { text-shadow: 0 0 20px #ff1493; }
-        }
-        
+
         /* تجاوب */
         @media (max-width: 700px) {
             h1 { font-size: 2rem; }
-            .fancy-names { font-size: 2.5rem; }
-            .splash-title { font-size: 3.5rem; }
-            .quote-content { font-size: 1.8rem; }
-            .gift-box { width: 70px; height: 70px; }
-            .gift-box i { font-size: 2.5rem; }
+            .fancy-names { font-size: 2rem; }
+            .splash-title { font-size: 3rem; }
+            .quote-content { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
-    <!-- تأثير الخلفية المتحركة -->
-    <div class="bg-effect" id="bgEffect"></div>
-    <div class="particles" id="particles"></div>
-    
-    <!-- تأثير قوس قزح (يظهر عند الفتح) -->
-    <div class="rainbow" id="rainbow"></div>
-
     <!-- شاشة البداية -->
     <div class="splash-screen" id="splashScreen">
         <div class="splash-content">
             <h1 class="splash-title">𝓐𝓼𝓶𝓪𝓪 ✧ 𝓜𝓸𝓱𝓪𝓶𝓶𝓪𝓭</h1>
-            <button class="enter-button" id="enterButton">💖 ادخلي إلى عالم الخيال 💖</button>
+            <button class="enter-button" id="enterButton">💖 ادخلي إلى عالم الحب 💖</button>
         </div>
     </div>
 
     <!-- عداد الحب -->
     <div class="love-count">
-        <i class="fas fa-heart" style="color:#ff69b4;"></i> <span id="loveCounter">0</span> رسالة حب
+        <i class="fas fa-heart" style="color:#ff69b4;"></i> <span id="loveCounter">0</span> رسالة
     </div>
 
     <!-- مشغل موسيقى (تأثير فقط) -->
     <div class="music-player" id="musicPlayer">
-        <i class="fas fa-music"></i> موسيقى سحرية
+        <i class="fas fa-music"></i> موسيقى
     </div>
 
     <!-- صندوق الهدية -->
@@ -830,19 +462,15 @@
 
     <!-- ذكرى خاصة -->
     <div class="memory-section">
-        <i class="fas fa-calendar-alt"></i>
-        <h2 style="font-size:3rem;">✨ ذكرى خالدة ✨</h2>
-        <div style="font-size:3.5rem; margin:25px;">❤️ ٦/٦/٢٠٢٥ ❤️</div>
-        <p style="font-size:2.2rem;">اليوم الذي بدأت فيه قصة حب أسطورية</p>
-        <i class="fas fa-heart" style="font-size:4rem;"></i>
+        <h2 style="font-size:2.5rem;">✨ ذكرى لا تُنسى ✨</h2>
+        <div style="font-size:3rem; margin:20px;">❤️ ٦/٦/٢٠٢٥ ❤️</div>
+        <p style="font-size:2rem;">اليوم الذي بدأت فيه قصة حبنا الخالدة</p>
     </div>
 
     <!-- اقتباس اليوم -->
     <div class="quote-section">
-        <i class="fas fa-quote-right"></i>
-        <h2 style="font-size:3rem;">💌 اقتباس اليوم</h2>
+        <h2 style="font-size:2.5rem;">💌 اقتباس اليوم</h2>
         <p class="quote-content" id="dailyQuote">الحب هو أن أراك في كل شيء</p>
-        <i class="fas fa-rose" style="font-size:4rem;"></i>
     </div>
 
     <!-- رسائل الحب -->
@@ -852,8 +480,295 @@
 
     <!-- إضافة رسالة -->
     <div class="add-message-container">
-        <i class="fas fa-envelope"></i>
-        <h2 style="margin-bottom:25px; font-size:2.5rem;">أضيفي رسالة حب سحرية</h2>
-        <textarea id="newMessage" placeholder="اكتبي ما في قلبك..."></textarea>
+        <h2 style="margin-bottom:20px;">أضيفي رسالة حب جديدة</h2>
+        <textarea id="newMessage" placeholder="اكتبي ما تشعرين به..."></textarea>
         <button id="addMessageBtn"><i class="fas fa-plus"></i> أضف رسالتك</button>
-    </
+    </div>
+
+    <!-- نافذة الهدية -->
+    <div class="gift-modal" id="giftModal">
+        <div class="gift-content">
+            <button class="close-btn" id="closeGift">&times;</button>
+            <h2 style="color:#ff69b4; font-size:3rem;">🎁 هديتك</h2>
+            <p style="font-size:1.8rem; margin:30px;">لكِ وحدكِ.. بكل حب</p>
+            <button onclick="showLetter()">استلمي الهدية</button>
+        </div>
+    </div>
+
+    <!-- رسالة الحب الخفية -->
+    <div class="letter-modal" id="letterModal">
+        <div class="letter-content">
+            <button class="close-btn" id="closeLetter">&times;</button>
+            <h2 style="color:#d056c5;">إلى حبيبتي 𝓐𝓼𝓶𝓪𝓪</h2>
+            <p style="margin:30px 0;">
+                أنتِ النور الذي أضاء حياتي،<br>
+                وكل يوم معك هو عيد حب.<br>
+                أحبك أكثر مما تتخيلين.<br>
+                إلى الأبد،<br>
+                𝓜𝓸𝓱𝓪𝓶𝓶𝓪𝓭
+            </p>
+            <p style="font-size:1.5rem;">❤️</p>
+        </div>
+    </div>
+
+    <footer>بكل الحب... إلى الأبد ✧ ٢٠٢٥</footer>
+
+    <script>
+        (function() {
+            // عناصر الصفحة
+            const splash = document.getElementById('splashScreen');
+            const enterBtn = document.getElementById('enterButton');
+            const messagesDiv = document.getElementById('messagesContainer');
+            const newMsg = document.getElementById('newMessage');
+            const addBtn = document.getElementById('addMessageBtn');
+            const loveCounter = document.getElementById('loveCounter');
+            const dailyQuote = document.getElementById('dailyQuote');
+            const heartContainer = document.getElementById('heartContainer');
+            const giftBox = document.getElementById('giftBox');
+            const giftModal = document.getElementById('giftModal');
+            const letterModal = document.getElementById('letterModal');
+            const closeGift = document.getElementById('closeGift');
+            const closeLetter = document.getElementById('closeLetter');
+            const musicPlayer = document.getElementById('musicPlayer');
+
+            // اقتباسات رومانسية (أكثر من 50)
+            const quotes = [
+                "حبك هو النور الذي يضيء حياتي",
+                "معك فقط أشعر بأنني في بيتي",
+                "أنتِ كل شيء جميل في حياتي",
+                "قلبي ينتمي إليكِ منذ اللحظة الأولى",
+                "حبي لكِ أكبر من الكلمات",
+                "كل يوم معك هو قصة حب جديدة",
+                "وجودكِ في حياتي هو أجمل هدية",
+                "ابتسامتكِ تشرق كالشمس",
+                "أنتِ الحلم الذي لا أريد أن أستيقظ منه",
+                "عيونكِ مرآة روحي",
+                "صوتكِ هو الموسيقى التي تريح قلبي",
+                "حبكِ يجعلني شخصاً أفضل",
+                "أنتِ النبض الذي يحييني",
+                "معكِ تعلمت معنى السعادة",
+                "أنتِ الوجه الجميل لهذا العالم",
+                "حياتي قبلكِ كانت ناقصة",
+                "أنتِ النصف الآخر الذي كنت أبحث عنه",
+                "كل ما فيكِ جميل",
+                "أنتِ القصيدة التي أكتبها كل يوم",
+                "حبكِ هو الملاذ الآمن",
+                "أنتِ السر وراء ابتسامتي",
+                "لا شيء يضاهي جمال روحك",
+                "أنتِ الكنز الذي وجدته",
+                "معكِ كل شيء ممكن",
+                "أنتِ السحر الذي يحيط بي",
+                "حبكِ هو اللغة التي أفهمها",
+                "أنتِ الزهرة في حديقة عمري",
+                "كل شيء يذكرني بكِ",
+                "أنتِ الأميرة التي تحولت لحقيقة",
+                "حبكِ هو النجمة التي تهتدى بها",
+                "أنتِ الجواب على كل أسئلتي",
+                "معكِ أشعر أنني قادر على المستحيل",
+                "أنتِ الأغنية التي أحب سماعها",
+                "حبكِ هو الدفء في ليالي الشتاء",
+                "أنتِ النسمة الباردة في صيفي",
+                "كل خلية في جسدي تحبكِ",
+                "أنتِ أجمل ما حدث لي",
+                "حبكِ هو الهواء الذي أتنفسه",
+                "أنتِ النور في عتمة حياتي",
+                "معكِ كل الأيام جميلة",
+                "أنتِ القمر الذي ينير ليلي",
+                "حبكِ هو الشعر الذي لا ينتهي",
+                "أنتِ الحب الذي كنت أنتظره",
+                "أنتِ نعمة من السماء",
+                "أحبكِ أكثر من أي شيء",
+                "أنتِ ملاكي الصغير",
+                "حبكِ يعطيني القوة",
+                "أنتِ سبب سعادتي",
+                "أنتِ كل شيء بالنسبة لي",
+                "لو كان العمر مرتين، لأحببتك فيهما",
+                "أنتِ الأمل الذي يضيء دربي",
+                "لولا وجودكِ لما كانت للحياة طعم"
+            ];
+
+            // اختيار اقتباس عشوائي
+            dailyQuote.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+
+            // إخفاء شاشة البداية عند الضغط
+            enterBtn.addEventListener('click', () => {
+                splash.style.opacity = '0';
+                setTimeout(() => splash.style.display = 'none', 1500);
+                startFloatingHearts();
+                // إظهار بعض الكونفيتي احتفالاً
+                for (let i = 0; i < 30; i++) {
+                    setTimeout(() => createConfetti(), i * 50);
+                }
+            });
+
+            // عرض الرسائل المحفوظة
+            function displayMessages() {
+                const msgs = JSON.parse(localStorage.getItem('loveMessages')) || [];
+                loveCounter.textContent = msgs.length;
+                messagesDiv.innerHTML = '';
+                if (msgs.length === 0) {
+                    messagesDiv.innerHTML = '<div class="message-card">💬 لا توجد رسائل بعد... أضيفي أول رسالة حب!</div>';
+                    return;
+                }
+                // ترتيب من الأحدث
+                msgs.sort((a, b) => new Date(b.date) - new Date(a.date));
+                msgs.forEach((msg, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'message-card';
+                    const dateStr = new Date(msg.date).toLocaleDateString('ar-EG', { year:'numeric', month:'long', day:'numeric' });
+                    card.innerHTML = `
+                        <div class="message-header">
+                            <span class="message-date"><i class="fas fa-calendar"></i> ${dateStr}</span>
+                            <span class="message-actions">
+                                <button class="edit-btn" data-index="${index}"><i class="fas fa-edit"></i></button>
+                                <button class="delete-btn" data-index="${index}"><i class="fas fa-trash"></i></button>
+                            </span>
+                        </div>
+                        <div class="message-content">${msg.content}</div>
+                    `;
+                    messagesDiv.appendChild(card);
+                });
+
+                // ربط أزرار التعديل والحذف
+                document.querySelectorAll('.edit-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const index = e.currentTarget.dataset.index;
+                        const msgs = JSON.parse(localStorage.getItem('loveMessages')) || [];
+                        const newText = prompt('عدّلي الرسالة:', msgs[index].content);
+                        if (newText && newText.trim()) {
+                            msgs[index].content = newText.trim();
+                            localStorage.setItem('loveMessages', JSON.stringify(msgs));
+                            displayMessages();
+                            createBubble('✏️ تم التعديل');
+                        }
+                    });
+                });
+                document.querySelectorAll('.delete-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const index = e.currentTarget.dataset.index;
+                        if (confirm('هل أنت متأكدة من الحذف؟')) {
+                            const msgs = JSON.parse(localStorage.getItem('loveMessages')) || [];
+                            msgs.splice(index, 1);
+                            localStorage.setItem('loveMessages', JSON.stringify(msgs));
+                            displayMessages();
+                            createBubble('🗑️ تم الحذف');
+                        }
+                    });
+                });
+            }
+            displayMessages();
+
+            // إضافة رسالة جديدة
+            addBtn.addEventListener('click', () => {
+                const text = newMsg.value.trim();
+                if (!text) return alert('اكتبي رسالة حب!');
+                const msgs = JSON.parse(localStorage.getItem('loveMessages')) || [];
+                msgs.push({ date: new Date().toISOString(), content: text });
+                localStorage.setItem('loveMessages', JSON.stringify(msgs));
+                newMsg.value = '';
+                displayMessages();
+                createBubble('❤️ تمت الإضافة ❤️');
+            });
+
+            // النقر في أي مكان يظهر فقاعة بكلمة رومانسية
+            document.body.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON' || e.target.tagName === 'TEXTAREA') return;
+                const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+                createBubble(randomQuote);
+            });
+
+            // دالة إنشاء الفقاعات
+            function createBubble(text) {
+                const bubble = document.createElement('div');
+                bubble.className = 'bubble';
+                bubble.textContent = text;
+                bubble.style.left = Math.random() * window.innerWidth + 'px';
+                bubble.style.bottom = '10px';
+                document.body.appendChild(bubble);
+                setTimeout(() => bubble.remove(), 3000);
+            }
+
+            // قلوب طافية في الخلفية
+            function startFloatingHearts() {
+                setInterval(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'floating-heart';
+                    heart.innerHTML = '❤️';
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.animationDuration = 6 + Math.random() * 6 + 's';
+                    document.body.appendChild(heart);
+                    setTimeout(() => heart.remove(), 12000);
+                }, 600);
+            }
+
+            // تأثير عند النقر على القلب
+            heartContainer.addEventListener('click', () => {
+                for (let i = 0; i < 20; i++) {
+                    setTimeout(() => {
+                        const smallHeart = document.createElement('div');
+                        smallHeart.style.position = 'fixed';
+                        smallHeart.style.fontSize = '2rem';
+                        smallHeart.style.color = '#ff69b4';
+                        smallHeart.style.left = heartContainer.getBoundingClientRect().left + 40 + 'px';
+                        smallHeart.style.top = heartContainer.getBoundingClientRect().top + 40 + 'px';
+                        smallHeart.innerHTML = '❤️';
+                        smallHeart.style.transition = 'all 2s';
+                        document.body.appendChild(smallHeart);
+                        setTimeout(() => {
+                            smallHeart.style.transform = `translate(${Math.random()*200-100}px, ${Math.random()*200-100}px) scale(0)`;
+                            smallHeart.style.opacity = '0';
+                        }, 10);
+                        setTimeout(() => smallHeart.remove(), 2000);
+                    }, i * 70);
+                }
+            });
+
+            // صندوق الهدية
+            giftBox.addEventListener('click', () => {
+                giftModal.classList.add('active');
+            });
+            closeGift.addEventListener('click', () => giftModal.classList.remove('active'));
+
+            window.showLetter = function() {
+                giftModal.classList.remove('active');
+                letterModal.classList.add('active');
+                // أمطار من القلوب
+                for (let i = 0; i < 40; i++) {
+                    setTimeout(createConfetti, i * 60);
+                }
+            };
+
+            closeLetter.addEventListener('click', () => letterModal.classList.remove('active'));
+
+            // دالة إنشاء الكونفيتي
+            function createConfetti() {
+                const conf = document.createElement('div');
+                conf.className = 'confetti';
+                conf.style.left = Math.random() * 100 + 'vw';
+                conf.style.top = '-20px';
+                conf.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
+                conf.style.animationDuration = 2 + Math.random() * 3 + 's';
+                document.body.appendChild(conf);
+                setTimeout(() => conf.remove(), 5000);
+            }
+
+            // مشغل الموسيقى (وهمي، فقط تغيير النص)
+            musicPlayer.addEventListener('click', function() {
+                if (this.innerHTML.includes('موسيقى')) {
+                    this.innerHTML = '<i class="fas fa-stop"></i> إيقاف';
+                } else {
+                    this.innerHTML = '<i class="fas fa-music"></i> موسيقى';
+                }
+            });
+
+            // إغلاق النوافذ عند النقر خارج المحتوى
+            giftModal.addEventListener('click', (e) => {
+                if (e.target === giftModal) giftModal.classList.remove('active');
+            });
+            letterModal.addEventListener('click', (e) => {
+                if (e.target === letterModal) letterModal.classList.remove('active');
+            });
+        })();
+    </script>
+</body>
+</html>
